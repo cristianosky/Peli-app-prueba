@@ -1,0 +1,28 @@
+<div class="row">
+    
+    <div class="col-4">
+        <img [src]="img+peli.poster_path" alt="" style="margin-left: 37px; width: 88%;">
+    </div>
+
+    <div class="col-8">
+        <div class="col text-center">
+            <h1>{{peli.title}}</h1>
+        </div>
+        <div class="col">
+            <p *ngIf="peli.overview"><span class="subtitle"><b>Sinopsis: </b></span>{{peli.overview}}</p>
+            <p *ngIf="!peli.overview"><span class="subtitle"><b>Sinopsis: </b></span> No cuenta</p>
+        </div>
+        <div class="col">
+            <p><span class="subtitle"><b>Compañia productora: </b></span> {{peli.production_companies[0].name}}</p>
+        </div>
+        <div class="col">
+            <p><span class="subtitle"><b>Fecha de lanzamiento: </b></span> {{peli.release_date}}</p>
+        </div>
+        <div class="col">
+            <p><span class="subtitle"><b>Votos :</b></span> {{peli.vote_average}}</p>
+        </div>
+        <div class="col">
+            <p><span class="subtitle"><b>Popularidad :</b></span> {{peli.popularity}}</p>
+        </div>
+    </div>
+</div>

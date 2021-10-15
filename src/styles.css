@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.color{
+    background-image: linear-gradient(130deg, #ffae00 0, #ff9d19 10%, #ff892c 20%, #ff7439 30%, #ff5d41 40%, #f94646 50%, #e22f49 60%, #cd184b 70%, #ba004e 80%, #a80051 90%, #9a0055 100%);
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-size: cover;
+}
+
+.cursor{
+    cursor: pointer;
+}

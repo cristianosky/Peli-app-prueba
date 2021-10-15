@@ -1,0 +1,14 @@
+<div class="row row-cols-sm-1 row-cols-md-3 g-4" infiniteScroll [infiniteScrollDistance]="2" (scrolled)="addpeli()">
+    <div class="col" *ngFor="let item of peliculas">
+        <div class="card cursor" [routerLink]="['/pelicula/',item.id]">
+            <img *ngIf="item.backdrop_path" [src]="img+item.backdrop_path" class="card-img-top" alt="...">
+            <img *ngIf="!item.backdrop_path" src="../../../assets/img/No_imagen.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h3 class="card-title"><b>{{item.title}}</b></h3>
+                <p class="card-text">Fecha de lanzamiento: {{item.release_date}}</p>
+                <p *ngIf="info != 2" class="card-text">Popularidad: {{item.popularity}}</p>
+                <p *ngIf="info == 2" class="card-text">Votos: {{item.vote_average}}</p>
+            </div>
+        </div>
+    </div>
+</div>
